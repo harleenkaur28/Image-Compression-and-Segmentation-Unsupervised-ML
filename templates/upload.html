@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url('https://cdn.pixabay.com/photo/2014/11/03/10/44/camera-514992_1280.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #bg{background-color: black;
+        text-align: center;
+        background-color: black;
+           background-size: cover;
+            color: white; 
+            padding: 20px;
+            text-align: center;
+    }
+
+    form{
+        padding: 15px;
+        text-align: center;
+    }
+
+    button{
+        padding: 5px;
+        margin:10px;
+        background-color: rgb(191, 52, 52);
+        color: black;
+        width: 75px;
+        height: 30px;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+    button:hover{
+        transform: scale(1.05);
+    }
+
+    </style>
+</head>
+<body>
+    <div id="bg">
+    <h1>Upload an Image to Segment</h1>
+    <form method="post" enctype="multipart/form-data">
+       Enter the Number of Clusters(optional) <input type="text" name="number">
+       <br>
+       <p>Note: Increasing the number of clusters would increase the details in the picture</p>
+       <br>
+      Upload the File <input type="file" name="file">
+      <br>
+      <br>
+      <button type="submit" value="Upload" onclick="">Upload</button>
+      <p>{{select_file}}</p>
+    </form>
+    </div>
+</body>
+</html>
